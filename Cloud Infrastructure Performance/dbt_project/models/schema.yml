@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw_infra              # This MUST match the first word in your source() function
+    database: spry-ivy-498220-k3
+    schema: raw_infra            # This is your actual BigQuery dataset folder name
+    tables:
+      - name: raw_server_inventory
+      - name: raw_hourly_resource_logs
+
+  - name: raw_ecommerce
+    database: spry-ivy-498220-k3
+    schema: raw_ecommerce
+    tables:
+      - name: raw_customers
+      - name: raw_products
+      - name: raw_orders
